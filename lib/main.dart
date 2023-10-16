@@ -48,7 +48,7 @@ class _MainState extends State<Main> {
                     Color.fromARGB(255, 10, 14, 240),
                     Color.fromARGB(255, 8, 5, 44),
                     
-                  ], // Gradient from https://learnui.design/tools/gradient-generator.html
+                  ], 
                   tileMode: TileMode.mirror,
                 ),
               ),
