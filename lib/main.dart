@@ -12,7 +12,10 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
+  // untuk menentukan apakah favourite icon filled atau tidak
   bool clicked = false;
+
+  // function untuk toggle favourite icon filled atau tidak)
   void clickHeart() {
     setState(() {
       clicked = !clicked;
@@ -31,6 +34,7 @@ class _MainState extends State<Main> {
         ),
         body: Stack(
           children: [
+            // layer pertama : background gradient
             Container(
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
@@ -49,6 +53,7 @@ class _MainState extends State<Main> {
                 ),
               ),
             ),
+            // layer kedua : images and text
             Column(
               children: [
                 Flexible(
@@ -59,6 +64,7 @@ class _MainState extends State<Main> {
                           "images/banner.jpg",
                           fit: BoxFit.cover,
                         ))),
+                // gambar row (4 gambar)
                 Flexible(
                     flex: 1,
                     child: Container(
@@ -98,6 +104,7 @@ class _MainState extends State<Main> {
                                 ))
                           ],
                         ))),
+                // Keterangan text 
                 Flexible(
                   flex: 4,
                   child: Container(
@@ -129,6 +136,7 @@ Jujutsu Sorcerers (呪術師, Jujutsushi, lit. "Cursed Technique Masters" or "Sh
                 ),
               ],
             ),
+            // layer ke-3 : floating action button
             Padding(
               padding: EdgeInsets.all(10),
               child: Align(
